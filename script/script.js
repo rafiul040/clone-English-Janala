@@ -6,7 +6,7 @@ const createElements = (arr) => {
 
 function pronounceWord(word){
     const utterance = new SpeechSynthesisUtterance(word)
-    utterance.lang = 'en-EN' //English
+    utterance.lang = 'en-EN' 
     window.speechSynthesis.speak(utterance)
 }
 
@@ -26,9 +26,8 @@ const manageSpinner = (status) => {
 
 
 const loadLessons = () => {
-    //promise of response
     fetch("https://openapi.programming-hero.com/api/levels/all")
-    // Promise of Json Data
+    
     .then(res => res.json())
 
     .then(json => displayLesson(json.data))
