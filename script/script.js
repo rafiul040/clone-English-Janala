@@ -104,14 +104,7 @@ const displayLevelWord = (words) => {
         manageSpinner(false)
         return
     }
-    // {
-    //     "id": 82,
-    //     "level": 1,
-    //     "word": "Car",
-    //     "meaning": "গাড়ি",
-    //     "pronounciation": "কার"
-    // }
-    // Use ForEach
+
     words.forEach((word) => {
         const card = document.createElement('div')
         card.innerHTML = `
